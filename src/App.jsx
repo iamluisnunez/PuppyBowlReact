@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllPlayers from "./Components/AllPlayers";
 import SinglePlayer from "./Components/SinglePlayer";
-import NewPuppyForm from "./Components/newPuppyForm";
+import NewPuppyForm from "./Components/NewPuppyForm";
 import fetchAllPlayers from "./AjaxHelper"; // Adjust the path accordingly
 import { useNavigate } from "react-router-dom";
 
