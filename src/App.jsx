@@ -3,11 +3,9 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import NewPlayerForm from "./Components/NewPlayerForm";
 import AllPlayers from "./Components/AllPlayers";
 import SinglePlayer from "./Components/SinglePlayer";
-import NewPuppyForm from "./Components/NewPuppyForm";
+import NewPuppyForm from "./Components/newPuppyForm";
 import fetchAllPlayers from "./AjaxHelper"; // Adjust the path accordingly
 import { useNavigate } from "react-router-dom";
 
@@ -34,18 +32,8 @@ function App() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/navbar" className="nav-link">
-                To Navbar
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/newpuppy" className="nav-link">
                 Add New Puppy
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/singlePlayer/:id" className="nav-link">
-                To Single Player
               </Link>
             </li>
           </ul>
@@ -54,8 +42,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<AllPlayers />} />
-        <Route path="/navbar" element={<Navbar />} />
-        <Route path="/new-player" element={<NewPlayerForm />} />
         <Route path="/singlePlayer/:id" element={<SinglePlayer />} />
         <Route path="/newpuppy" element={<NewPuppyForm />} />
       </Routes>
